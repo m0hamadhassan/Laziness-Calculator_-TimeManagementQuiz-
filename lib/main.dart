@@ -116,33 +116,33 @@ class _MyAppState extends State<MyApp> {
     {
       'questionText': 'Are you stressed about deadlines and commitments?',
       'answers': [
-        {'text': 'Not at all', 'score': 1},
-        {'text': 'Rarely', 'score': 2},
+        {'text': 'Not at all', 'score': 5},
+        {'text': 'Rarely', 'score': 4},
         {'text': 'Some times', 'score': 3},
-        {'text': 'Often', 'score': 4},
-        {'text': 'Very often', 'score': 5},
+        {'text': 'Often', 'score': 2},
+        {'text': 'Very often', 'score': 1},
       ],
     },
     {
       'questionText':
           'Do distractions often keep you from working on critical tasks?',
       'answers': [
-        {'text': 'Not at all', 'score': 1},
-        {'text': 'Rarely', 'score': 2},
+        {'text': 'Not at all', 'score': 5},
+        {'text': 'Rarely', 'score': 4},
         {'text': 'Some times', 'score': 3},
-        {'text': 'Often', 'score': 4},
-        {'text': 'Very often', 'score': 5},
+        {'text': 'Often', 'score': 2},
+        {'text': 'Very often', 'score': 1},
       ],
     },
     {
       'questionText':
           'Do you have to take work home, in order to get it done ?',
       'answers': [
-        {'text': 'Not at all', 'score': 1},
-        {'text': 'Rarely', 'score': 2},
+        {'text': 'Not at all', 'score': 5},
+        {'text': 'Rarely', 'score': 4},
         {'text': 'Some times', 'score': 3},
-        {'text': 'Often', 'score': 4},
-        {'text': 'Very often', 'score': 5},
+        {'text': 'Often', 'score': 2},
+        {'text': 'Very often', 'score': 1},
       ],
     },
     {
