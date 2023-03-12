@@ -6,14 +6,16 @@ class Result extends StatelessWidget {
   Result(this.resultScore, this.resetHandler);
   String get resultPhrase {
     var resultText;
-    if (resultScore >= 46) {
-      resultText = '\nYou are managing your time very effectively, Boss';
+    if (resultScore >= 70) {
+      resultText = '\nYou are managing your time very effectively, Boss\n';
+    } else if (resultScore < 65 && resultScore >= 46) {
+      resultText = '\nYou are managing your time very effectively\n';
     } else if (resultScore <= 46 && resultScore >= 31) {
       resultText =
           '\nYou are goode at some things, but there is room for improvement elsewhere';
     } else if (resultScore < 30) {
       resultText =
-          '\nOuch...\nTHe good news is that you\'ve got a great opportunity to improve your effectiveness at work, and your long-term success !.';
+          '\nOuch...\nThe good news is that you\'ve got a great opportunity to improve your effectiveness at work, and your long-term success !.';
     }
     return resultText;
   }
@@ -36,7 +38,8 @@ class Result extends StatelessWidget {
         ),
         OutlinedButton(
           onPressed: resetHandler,
-          child: Text('Restart Quiz !'),
+          child: Text('Restart Quiz !',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         )
       ],
     ));

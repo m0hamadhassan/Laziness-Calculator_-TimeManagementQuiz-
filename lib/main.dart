@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './quiz.dart';
 import './result.dart';
+import './start.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,11 +30,11 @@ class _MyAppState extends State<MyApp> {
       'questionText':
           'Do you find yourself completing tasks at the last minute ?',
       'answers': [
-        {'text': 'Not at all', 'score': 1},
-        {'text': 'Rarely', 'score': 2},
+        {'text': 'Not at all', 'score': 5},
+        {'text': 'Rarely', 'score': 4},
         {'text': 'Some times', 'score': 3},
-        {'text': 'Often', 'score': 4},
-        {'text': 'Very often', 'score': 5},
+        {'text': 'Often', 'score': 2},
+        {'text': 'Very often', 'score': 1},
       ],
     },
     {
@@ -59,13 +60,13 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText':
-          'How often do you find yourself dealing with interruptions?',
+          'How often do you find yourself dealing with interruptions ?',
       'answers': [
-        {'text': 'Not at all', 'score': 1},
-        {'text': 'Rarely', 'score': 2},
+        {'text': 'Not at all', 'score': 5},
+        {'text': 'Rarely', 'score': 4},
         {'text': 'Some times', 'score': 3},
-        {'text': 'Often', 'score': 4},
-        {'text': 'Very often', 'score': 5},
+        {'text': 'Often', 'score': 2},
+        {'text': 'Very often', 'score': 1},
       ],
     },
     {
@@ -81,7 +82,7 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText':
-          'Do you leave contigency time in your schedule to deal with "the unexpected"',
+          'Do you leave contigency time in your schedule to deal with "the unexpected" ?',
       'answers': [
         {'text': 'Not at all', 'score': 1},
         {'text': 'Rarely', 'score': 2},
@@ -103,7 +104,7 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'questionText':
-          'When you are given a new assignment, do you analyze it for importance and prioritize it accordingly?',
+          'When you are given a new assignment, do you analyze it for importance and prioritize it accordingly ?',
       'answers': [
         {'text': 'Not at all', 'score': 1},
         {'text': 'Rarely', 'score': 2},
@@ -178,7 +179,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
   ];
-  var _questionIndex = 0;
+  var _questionIndex = 100;
   var _totalScore = 0;
   void _resetQuiz() {
     setState(() {
@@ -201,12 +202,14 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Time Management Quiz', textAlign: TextAlign.center),
         ),
-        body: _questionIndex < _questions.length
-            ? Quiz(
-                answerQuestion: _answerQuestion,
-                questionIndex: _questionIndex,
-                questions: _questions)
-            : Result(_totalScore, _resetQuiz),
+        body: (_questionIndex == 100)
+            ? Start(_resetQuiz)
+            : _questionIndex < _questions.length
+                ? Quiz(
+                    answerQuestion: _answerQuestion,
+                    questionIndex: _questionIndex,
+                    questions: _questions)
+                : Result(_totalScore, _resetQuiz),
       ),
     );
   }
