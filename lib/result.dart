@@ -30,7 +30,7 @@ class Result extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         Text(
-          "\n Your Level of \nlaziness is " +
+          "\n Your Level of \nLaziness is " +
               (((75 - resultScore) / 60) * 100).toInt().toString() +
               "% \n",
           style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
