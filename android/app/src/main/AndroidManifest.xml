@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_create_guide">
+    package="com.example.LazinessCalculator">
    <application
-        android:label="flutter_create_guide"
+        android:label="LazinessCalculator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
