@@ -211,6 +211,8 @@ class _MyAppState extends State<MyApp> {
                     questions: _questions)
                 : Result(_totalScore, _resetQuiz),
       ),
+      theme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
     );
   }
 }
